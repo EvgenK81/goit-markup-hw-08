@@ -1,0 +1,106 @@
+.section--background{
+    
+    background: #F5F4FA;
+}
+
+
+.team {
+    @media screen and (min-width: 200px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: initial;
+    }
+}
+
+.team__item {
+    display: block;
+
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 90px) / 4);
+    }
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: var(--primary-background-color);
+}
+
+.team__img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+
+}
+
+
+.team__box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: #FFFFFF;
+}
+
+
+.team__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-font-color);
+}
+
+.team__text {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondari-color);
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    transition: background-color var(--transition-speed);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+ 
+
+.socials__icon {
+    fill: var(--icon-color);
+    transition: fill var(--transition-speed);
+    .socials__link:hover &,
+    .socials__link:focus & {
+            fill: var(--button-text-color);
+        }
+}
